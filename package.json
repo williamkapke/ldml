@@ -1,0 +1,27 @@
+{
+  "name": "ldml",
+  "version": "0.0.0",
+  "description": "A module to query the CLDR xml data with inheritance",
+  "main": "ldml.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cldr/ldml.git"
+  },
+  "keywords": [
+    "CLDR",
+    "LDML"
+  ],
+  "author": "William Wicks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cldr/ldml/issues"
+  },
+  "dependencies": {
+    "consumer": "~1",
+    "xpath": "0.0.5",
+    "xmldom": "~0.1.16"
+  }
+}
