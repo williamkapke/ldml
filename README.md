@@ -37,9 +37,9 @@ The full search route for this query was actually:
 **This repo does not include the CLDR data files**. You will need to download and extract
 [core.zip](http://unicode.org/Public/cldr/23.1/).
 
-## ldml.source
+## ldml.data
 After downloading the data, you need to make sure the module knows where to find it. Set the 
-`source` property to the location of the `/common/` directory.
+`data` property to the location of the `/common/` directory.
 
 
 ## ldml.cache
