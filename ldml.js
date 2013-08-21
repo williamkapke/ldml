@@ -43,8 +43,8 @@ exports = module.exports = {
 		var c = new Consumer(chain);
 		var depth = 0;
 		while(!c.done){
-			c.consume(/\//);
-			var name = c.consume(/[^\[\/\[]+/g)[0];
+			c.consume(/\/+/);
+			var name = c.consume(/[^\[\/]+/g)[0];
 			depth++;
 			var attr, attrs = {};
 			while(attr = c.consume(/\[@([^=]+)=["']([^"']+)["']\]/g)){
@@ -131,6 +131,8 @@ function identity(){
  * @returns {Array}
  */
 function query(xpath){
+	if(!/^\/ldml/.test(xpath))
+		throw new Error("query must start with /ldml");
 	var parent=this, found;
 	do{
 		found = parent.find(xpath);
