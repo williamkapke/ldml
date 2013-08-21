@@ -87,7 +87,8 @@ exports = module.exports = {
 	},
 	get metadata() {
 		return require("./supplementalMetadata");
-	}
+	},
+	chainString: chainString
 };
 
 function cacher(dir){
@@ -198,8 +199,8 @@ Link.prototype.toString = function(){
 }
 function chainString(){
 	return '/'+this.map(function (link) {
-			return link.toString();
-		})
+		return link.toString();
+	})
 		.join('/');
 }
 
